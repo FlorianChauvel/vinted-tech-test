@@ -2,6 +2,12 @@ import { useEffect, useState } from "react";
 import { fetchPhotos } from "../api/fetchPhotos";
 import { Photo } from "../types/Photo";
 
+const concatWithoutDuplicates = (currentPhotos: Photo[], incomingPhotos: Photo[]): Photo[] => {
+    const currentIds = currentPhotos.map(photo => photo.id);
+    const nonDuplicates = incomingPhotos.filter(photo => !currentIds.includes(photo.id));
+    return currentPhotos.concat(nonDuplicates);
+};
+
 const usePhotos = (currentPage: number) => {
     const [data, setData] = useState<{ photos: Photo[], pagesCount: number }>({
         photos: [],
@@ -15,7 +21,7 @@ const usePhotos = (currentPage: number) => {
             const json = await fetchPhotos(page);
             setData(data => ({
                 pagesCount: json.photos.pages,
-                photos: data.photos.concat(json.photos.photo),
+                photos: concatWithoutDuplicates(data.photos, json.photos.photo),
             }));
             setIsLoading(false);
         };
