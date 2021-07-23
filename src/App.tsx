@@ -1,16 +1,17 @@
 import React, { useState } from 'react';
 import InfiniteScroll from './components/InfiniteScroll';
-import usePictures from './hooks/usePictures';
+import usePhotos from './hooks/usePhotos';
 
 const App: React.FC = () => {
   const [currentPage, setCurrentPage] = useState(1);
-  const { pictures, hasMore, isLoading } = usePictures(currentPage);
+
+  const { photos, hasMore, isLoading } = usePhotos(currentPage);
 
   const handleLoadMore = () => {
     setCurrentPage(current => current + 1);
   };
 
-  const images = pictures.map(picture => <img key={picture.id} src={picture.url_l} alt={picture.title} />);
+  const images = photos.map(photo => <img key={photo.id} src={photo.url_l} alt={photo.title} />);
 
   return (
     <div>

@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
-import { fetchPictures } from "../api/fetchPictures";
+import { fetchPhotos } from "../api/fetchPhotos";
 import { Photo } from "../types/Photo";
 
-const usePictures = (currentPage: number) => {
-    const [data, setData] = useState<{ pictures: Photo[], pagesCount: number }>({
-        pictures: [],
+const usePhotos = (currentPage: number) => {
+    const [data, setData] = useState<{ photos: Photo[], pagesCount: number }>({
+        photos: [],
         pagesCount: 0,
     });
     const [isLoading, setIsLoading] = useState(false);
@@ -12,10 +12,10 @@ const usePictures = (currentPage: number) => {
     useEffect(() => {
         const fetchData = async (page: number) => {
             setIsLoading(true);
-            const json = await fetchPictures(page);
+            const json = await fetchPhotos(page);
             setData(data => ({
                 pagesCount: json.photos.pages,
-                pictures: data.pictures.concat(json.photos.photo),
+                photos: data.photos.concat(json.photos.photo),
             }));
             setIsLoading(false);
         };
@@ -26,8 +26,8 @@ const usePictures = (currentPage: number) => {
     return {
         isLoading,
         hasMore: currentPage < data.pagesCount,
-        pictures: data.pictures,
+        photos: data.photos,
     };
 };
 
-export default usePictures;
+export default usePhotos;

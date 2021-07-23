@@ -1,6 +1,6 @@
 import { Photo } from "./Photo";
 
-export type FetchPicturesResponse = {
+export type FetchPhotosResponse = {
     photos: {
         page: number;
         pages: number;
