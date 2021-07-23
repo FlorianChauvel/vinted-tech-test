@@ -1,25 +1,26 @@
 import React, { useState } from 'react';
-import Block from './components/Block';
 import InfiniteScroll from './components/InfiniteScroll';
+import usePictures from './hooks/usePictures';
 
 const App: React.FC = () => {
-  const [step, setStep] = useState(10);
+  const [currentPage, setCurrentPage] = useState(1);
+  const { pictures, hasMore, isLoading } = usePictures(currentPage);
 
   const handleLoadMore = () => {
-    setStep(current => current + 10);
+    setCurrentPage(current => current + 1);
   };
 
-  const blocks = Array(step).fill(<Block />);
+  const images = pictures.map(picture => <img key={picture.id} src={picture.url_l} alt={picture.title} />);
 
   return (
     <div>
       <InfiniteScroll
         onLoadMore={handleLoadMore}
         loader={() => <>Loading...</>}
-        isLoading={false}
-        hasMore
+        isLoading={isLoading}
+        hasMore={hasMore}
       >
-        {blocks}
+        {images}
       </InfiniteScroll>
     </div>
   );

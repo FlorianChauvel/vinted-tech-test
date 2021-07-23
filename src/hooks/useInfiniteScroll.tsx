@@ -1,5 +1,4 @@
-import { useCallback } from "react";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useCallback } from "react";
 
 /**
  * Helper hook that implements infinite scroll behavior
@@ -9,31 +8,34 @@ import { useEffect, useRef } from "react";
  * @returns ref to pass to the element that triggers onLoadMore when becomes visible
  */
 const useInfiniteScroll = (hasMore: boolean, isLoading: boolean, onLoadMore: () => void) => {
-    const ref = useRef<HTMLDivElement>(null);
-    const observeCallback = useCallback(() => {
-        if (!hasMore || isLoading) {
+    const triggerRef = useRef<HTMLDivElement>(null);
+    const observerRef = useRef<IntersectionObserver>(null) as React.MutableRefObject<IntersectionObserver>;
+    const shouldLoadMore = hasMore && !isLoading;
+
+    const observeCallback = useCallback(([{ isIntersecting }]) => {
+        if (!shouldLoadMore || !isIntersecting) {
             return;
         }
 
         onLoadMore();
-    }, [hasMore, isLoading]);
+    }, [shouldLoadMore]);
 
     useEffect(() => {
-        const { current } = ref;
-        const observer = new IntersectionObserver(observeCallback);
-
-        if (current) {
-            observer.observe(current);
+        const node = triggerRef.current;
+        if (node) {
+            const observer = new IntersectionObserver(observeCallback);
+            observer.observe(node);
+            observerRef.current = observer;
         }
 
         return () => {
-            if (current) {
-                observer.unobserve(current);
+            if (node) {
+                observerRef.current.unobserve(node);
             }
         }
-    }, [ref, observeCallback]);
+    }, [observeCallback]);
 
-    return ref;
+    return triggerRef;
 };
 
 export default useInfiniteScroll;
