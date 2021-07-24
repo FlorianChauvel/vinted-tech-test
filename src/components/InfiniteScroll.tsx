@@ -15,7 +15,7 @@ const InfiniteScroll: React.FC<Props> = ({ hasMore, isLoading, onLoadMore, loade
     return (
         <div>
             {children}
-            <div ref={ref}>{loader()}</div>
+            <div ref={ref}>{hasMore && loader()}</div>
         </div>
     );
 };

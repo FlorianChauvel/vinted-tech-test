@@ -1,0 +1,71 @@
+.picture-overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity .2s ease-in-out;
+    border-radius: .5rem;
+    color: white;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+:hover > .picture-overlay {
+    opacity: 1;
+    background-color: transparent;
+}
+
+.picture-overlay > .description {
+    overflow: hidden;
+}
+
+.picture-overlay > .description {
+    grid-row-start: 2;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.picture-overlay > .description > h4 {
+    font-size: 20px;
+    margin-bottom: 0;
+    max-width: 80%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.picture-overlay > .description > hr {
+    border-top: 2px solid white;
+    width: 80px;
+}
+
+.picture-overlay > .description > i {
+    font-size: 18px;
+}
+
+.picture-overlay > button {
+    grid-row-start: 3;
+    font-size: 20px;
+    background-color: transparent;
+    border: 1px solid #e0e0e0;
+    border-radius: 24px;
+    color: #e0e0e0;
+    padding: 16px 24px;
+    line-height: 1rem;
+    cursor: pointer;
+    transition: color .2s ease-in-out, background-color .2s ease-in-out;
+    align-self: center;
+    justify-self: center;
+}
+.picture-overlay > button:hover {
+    border-color: white;
+    color: white;
+}
+
+.picture-overlay > button.selected {
+    background-color: #ffffff36;
+}

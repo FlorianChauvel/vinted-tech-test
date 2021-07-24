@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import InfiniteScroll from './components/InfiniteScroll';
-import PhotoDisplay from './components/PhotoDisplay';
+import PhotoGrid from './components/PhotoGrid';
+import Loader from './components/Loader';
 import usePersistedState from './hooks/usePersistedState';
 import usePhotos from './hooks/usePhotos';
 
-const getIsFavourite = (photoId: string, favourites: string[]) => favourites.includes(photoId);
+import './App.css';
+
 
 const App: React.FC = () => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -24,25 +26,15 @@ const App: React.FC = () => {
     setFavourites(current => current.filter(favourite => favourite !== unfavouriteId));
   };
 
-  const images = photos.map(photo => (
-    <PhotoDisplay
-      key={photo.id}
-      photo={photo}
-      isFavourite={getIsFavourite(photo.id, favourites)}
-      onFavour={handleFavour}
-      onUnfavour={handleUnfavour}
-    />
-  ));
-
   return (
-    <div>
+    <div className="main">
       <InfiniteScroll
         onLoadMore={handleLoadMore}
-        loader={() => <>Loading...</>}
+        loader={() => <Loader />}
         isLoading={isLoading}
         hasMore={hasMore}
       >
-        {images}
+        <PhotoGrid photos={photos} favourites={favourites} onFavour={handleFavour} onUnfavour={handleUnfavour} />
       </InfiniteScroll>
     </div>
   );

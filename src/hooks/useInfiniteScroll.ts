@@ -23,7 +23,9 @@ const useInfiniteScroll = (hasMore: boolean, isLoading: boolean, onLoadMore: () 
     useEffect(() => {
         const node = triggerRef.current;
         if (node) {
-            const observer = new IntersectionObserver(observeCallback);
+            const observer = new IntersectionObserver(observeCallback, {
+                rootMargin: '500px',
+            });
             observer.observe(node);
             observerRef.current = observer;
         }
