@@ -2,6 +2,10 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Demo
+
+Available at [https://florianchauvel.github.io/vinted-tech-test/](https://florianchauvel.github.io/vinted-tech-test/)
+
 ## Available Scripts
 
 In the project directory, you can run:
@@ -28,6 +32,10 @@ The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+### `yarn github-pages`
+
+Builds the app for production and pushes it to the gh-pages branch to publish it.
 
 ### `yarn eject`
 
