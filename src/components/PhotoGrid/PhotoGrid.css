@@ -11,3 +11,18 @@
     row-gap: 2rem;
     padding: 2rem;
 }
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .photo-grid > div {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+  
+/* Phone */
+@media (max-width: 767px) {
+    .photo-grid > div {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+  
