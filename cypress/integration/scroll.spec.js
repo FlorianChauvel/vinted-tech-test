@@ -1,4 +1,4 @@
-describe('example to-do app', () => {
+describe('scrolling', () => {
   it('should get some more results when scrolling to the bottom of the page', () => {
     cy.visit('http://localhost:3000');
 
