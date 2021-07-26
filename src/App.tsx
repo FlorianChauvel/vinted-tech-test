@@ -6,6 +6,7 @@ import usePersistedState from './hooks/usePersistedState';
 import usePhotos from './hooks/usePhotos';
 
 import './App.css';
+import SplashScreen from './components/SplashScreen';
 
 
 const App: React.FC = () => {
@@ -28,6 +29,7 @@ const App: React.FC = () => {
 
   return (
     <div className="main">
+      {currentPage === 1 && isLoading && <SplashScreen />}
       <InfiniteScroll
         onLoadMore={handleLoadMore}
         loader={() => <Loader />}
