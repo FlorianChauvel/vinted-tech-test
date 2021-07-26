@@ -4,6 +4,11 @@
     text-overflow: ellipsis;
 }
 
+/* fix for italic text being clipped */
+i.ellipsis {
+    padding-right: 1px;
+}
+
 .picture-overlay {
     position: absolute;
     top: 0;
