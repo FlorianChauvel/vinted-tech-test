@@ -24,7 +24,7 @@ const useInfiniteScroll = (hasMore: boolean, isLoading: boolean, onLoadMore: () 
         const node = triggerRef.current;
         if (node) {
             const observer = new IntersectionObserver(observeCallback, {
-                rootMargin: '500px',
+                rootMargin: '1500px',
             });
             observer.observe(node);
             observerRef.current = observer;
