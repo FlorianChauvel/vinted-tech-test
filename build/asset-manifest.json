@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/vinted-tech-test/static/css/main.db2a316d.chunk.css",
-    "main.js": "/vinted-tech-test/static/js/main.a2ed6855.chunk.js",
-    "main.js.map": "/vinted-tech-test/static/js/main.a2ed6855.chunk.js.map",
+    "main.js": "/vinted-tech-test/static/js/main.f501f9d4.chunk.js",
+    "main.js.map": "/vinted-tech-test/static/js/main.f501f9d4.chunk.js.map",
     "runtime-main.js": "/vinted-tech-test/static/js/runtime-main.ad09a5d6.js",
     "runtime-main.js.map": "/vinted-tech-test/static/js/runtime-main.ad09a5d6.js.map",
     "static/js/2.85d9d63b.chunk.js": "/vinted-tech-test/static/js/2.85d9d63b.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.ad09a5d6.js",
     "static/js/2.85d9d63b.chunk.js",
     "static/css/main.db2a316d.chunk.css",
-    "static/js/main.a2ed6855.chunk.js"
+    "static/js/main.f501f9d4.chunk.js"
   ]
 }
