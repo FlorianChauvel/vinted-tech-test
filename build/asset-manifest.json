@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/vinted-tech-test/static/css/main.5c88fa9e.chunk.css",
-    "main.js": "/vinted-tech-test/static/js/main.3be07b87.chunk.js",
-    "main.js.map": "/vinted-tech-test/static/js/main.3be07b87.chunk.js.map",
+    "main.css": "/vinted-tech-test/static/css/main.cbecea3c.chunk.css",
+    "main.js": "/vinted-tech-test/static/js/main.fe770c2f.chunk.js",
+    "main.js.map": "/vinted-tech-test/static/js/main.fe770c2f.chunk.js.map",
     "runtime-main.js": "/vinted-tech-test/static/js/runtime-main.df194bff.js",
     "runtime-main.js.map": "/vinted-tech-test/static/js/runtime-main.df194bff.js.map",
     "static/js/2.85d9d63b.chunk.js": "/vinted-tech-test/static/js/2.85d9d63b.chunk.js",
@@ -10,13 +10,13 @@
     "static/js/3.ce48945f.chunk.js": "/vinted-tech-test/static/js/3.ce48945f.chunk.js",
     "static/js/3.ce48945f.chunk.js.map": "/vinted-tech-test/static/js/3.ce48945f.chunk.js.map",
     "index.html": "/vinted-tech-test/index.html",
-    "static/css/main.5c88fa9e.chunk.css.map": "/vinted-tech-test/static/css/main.5c88fa9e.chunk.css.map",
+    "static/css/main.cbecea3c.chunk.css.map": "/vinted-tech-test/static/css/main.cbecea3c.chunk.css.map",
     "static/js/2.85d9d63b.chunk.js.LICENSE.txt": "/vinted-tech-test/static/js/2.85d9d63b.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.df194bff.js",
     "static/js/2.85d9d63b.chunk.js",
-    "static/css/main.5c88fa9e.chunk.css",
-    "static/js/main.3be07b87.chunk.js"
+    "static/css/main.cbecea3c.chunk.css",
+    "static/js/main.fe770c2f.chunk.js"
   ]
 }
