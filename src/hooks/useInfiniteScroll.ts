@@ -18,6 +18,7 @@ const useInfiniteScroll = (hasMore: boolean, isLoading: boolean, onLoadMore: () 
         }
 
         onLoadMore();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [shouldLoadMore]);
 
     useEffect(() => {
