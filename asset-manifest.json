@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/vinted-tech-test/static/css/main.cbecea3c.chunk.css",
-    "main.js": "/vinted-tech-test/static/js/main.fe770c2f.chunk.js",
-    "main.js.map": "/vinted-tech-test/static/js/main.fe770c2f.chunk.js.map",
-    "runtime-main.js": "/vinted-tech-test/static/js/runtime-main.df194bff.js",
-    "runtime-main.js.map": "/vinted-tech-test/static/js/runtime-main.df194bff.js.map",
+    "main.css": "/vinted-tech-test/static/css/main.db2a316d.chunk.css",
+    "main.js": "/vinted-tech-test/static/js/main.a2ed6855.chunk.js",
+    "main.js.map": "/vinted-tech-test/static/js/main.a2ed6855.chunk.js.map",
+    "runtime-main.js": "/vinted-tech-test/static/js/runtime-main.ad09a5d6.js",
+    "runtime-main.js.map": "/vinted-tech-test/static/js/runtime-main.ad09a5d6.js.map",
     "static/js/2.85d9d63b.chunk.js": "/vinted-tech-test/static/js/2.85d9d63b.chunk.js",
     "static/js/2.85d9d63b.chunk.js.map": "/vinted-tech-test/static/js/2.85d9d63b.chunk.js.map",
-    "static/js/3.ce48945f.chunk.js": "/vinted-tech-test/static/js/3.ce48945f.chunk.js",
-    "static/js/3.ce48945f.chunk.js.map": "/vinted-tech-test/static/js/3.ce48945f.chunk.js.map",
+    "static/js/3.66dc6f93.chunk.js": "/vinted-tech-test/static/js/3.66dc6f93.chunk.js",
+    "static/js/3.66dc6f93.chunk.js.map": "/vinted-tech-test/static/js/3.66dc6f93.chunk.js.map",
     "index.html": "/vinted-tech-test/index.html",
-    "static/css/main.cbecea3c.chunk.css.map": "/vinted-tech-test/static/css/main.cbecea3c.chunk.css.map",
+    "static/css/main.db2a316d.chunk.css.map": "/vinted-tech-test/static/css/main.db2a316d.chunk.css.map",
     "static/js/2.85d9d63b.chunk.js.LICENSE.txt": "/vinted-tech-test/static/js/2.85d9d63b.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.df194bff.js",
+    "static/js/runtime-main.ad09a5d6.js",
     "static/js/2.85d9d63b.chunk.js",
-    "static/css/main.cbecea3c.chunk.css",
-    "static/js/main.fe770c2f.chunk.js"
+    "static/css/main.db2a316d.chunk.css",
+    "static/js/main.a2ed6855.chunk.js"
   ]
 }
