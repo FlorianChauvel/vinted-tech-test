@@ -10,9 +10,9 @@ type Props = {
 const Overlay: React.FC<Props> = ({ title, ownername, isFavourite, onClick }) => (
     <div className="picture-overlay">
         <div className="description">
-            <h4>{title || 'Untitled'}</h4>
+            <h4 className="ellipsis">{title || 'Untitled'}</h4>
             <hr/>
-            <i>{ownername}</i>
+            <i className="ellipsis">{ownername}</i>
         </div>
         <button className={isFavourite ? 'selected' : ''} onClick={onClick}>{isFavourite ? 'Unfavour' : 'Favourite'}</button>
     </div>

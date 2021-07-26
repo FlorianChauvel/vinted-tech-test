@@ -1,3 +1,9 @@
+.ellipsis {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
 .picture-overlay {
     position: absolute;
     top: 0;
@@ -33,9 +39,6 @@
     font-size: 20px;
     margin-bottom: 0;
     max-width: 80%;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
 }
 
 .picture-overlay > .description > hr {
@@ -45,6 +48,7 @@
 
 .picture-overlay > .description > i {
     font-size: 18px;
+    max-width: 90%;
 }
 
 .picture-overlay > button {
